@@ -1,4 +1,4 @@
-package edu.csc422.week6;
+package main.java.edu.csc422.week6;
 
 public class FullStackException extends Exception {
 	

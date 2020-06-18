@@ -1,4 +1,4 @@
-package edu.csc422.week6;
+package main.java.edu.csc422.week6;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -33,8 +33,6 @@ public class week6 {
 					System.out.println("\n------------------------------------------------");
 					System.out.println("pushing a random number on the stack");
 			        Random rand = new Random();
-			        //int totalZombies = 5 + rand.nextInt(15 + 1);
-
 					list1.push(rand.nextInt(100));
 					break;
 				case "2":  //pop
