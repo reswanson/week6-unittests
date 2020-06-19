@@ -26,7 +26,6 @@ public class StackTest {
 
 		Stack instance = new Stack();
 		try {
-			// To test failure, comment out one of these push lines.
 			instance.push(1);
 			instance.push(1);
 			instance.push(1);
@@ -41,6 +40,32 @@ public class StackTest {
 		System.out.println("testEmpty");
 		Stack instance = new Stack();
 		assertEquals(true, instance.empty());
+	}
+	
+	
+	@Test(expected=EmptyStackException.class)
+	public void testEmptyStackExceptionPop() {
+		System.out.println("testEmptyStackExceptionPop()");
+		Stack instance = new Stack();
+		try {
+			instance.pop();
+		} catch (EmptyStackException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	
+	
+	@Test(expected=FullStackException.class)
+	public void testFullStackExceptionPush() {
+		System.out.println("testFullStackExceptionPop()");
+		Stack instance = new Stack(1);
+		try {
+			instance.push(1);
+			instance.push(1);	
+		} catch (FullStackException e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	@Test
