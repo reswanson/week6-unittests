@@ -1,13 +1,31 @@
 package edu.csc422.week6;
 
-import static org.junit.Assert.*;
-import java.util.ArrayList;
-import java.util.Arrays;
+//import static org.junit.Assert.*;
 
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.Test;
 
 public class StackTest {
+	
+	@Test
+	public void testSize() {
+        System.out.println("testSize");
+        int expResult = 2;
+        
+		Stack instance = new Stack();
+		instance.push(1);
+		instance.push(1);
+		int itssize=instance.size();
+        assertEquals(1, itssize);
+
+
+        //assertEquals(1, instance.size());
+	}
 
 	/*
 	@Test
@@ -41,22 +59,7 @@ public class StackTest {
 	}
 	*/
 
-	@Test
-	public void testSize() {
-        System.out.println("testSize");
-        int x = 2;
-        /*
-        Math instance = new Math();
-        int expResult = 4;
-        int result = instance.squareIt(x);
-        assertEquals(expResult, result);
-        
-        assertEquals(64, instance.squareIt(8));
-        assertEquals(4080400, instance.squareIt(2020));
-        */
-
-		//fail("Not yet implemented");
-	}
+/* test was here */
 
 	/*
 	@Test

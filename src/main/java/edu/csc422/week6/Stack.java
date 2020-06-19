@@ -1,4 +1,4 @@
-package main.java.edu.csc422.week6;
+package edu.csc422.week6;
 
 import java.util.ArrayList;
 import java.util.Arrays;
