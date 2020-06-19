@@ -1,6 +1,8 @@
 package edu.csc422.week6;
 
 import org.junit.Test;
+import org.junit.Rule;
+
 import static org.junit.Assert.*;
 
 
@@ -34,6 +36,7 @@ public class StackTest {
 		}
 		assertEquals(3, instance.size());
 	}
+	
 		
 	@Test
 	public void testEmpty() {
@@ -43,6 +46,7 @@ public class StackTest {
 	}
 	
 	
+	/*
 	@Test(expected=EmptyStackException.class)
 	public void testEmptyStackExceptionPop() {
 		System.out.println("testEmptyStackExceptionPop()");
@@ -53,8 +57,26 @@ public class StackTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	*/
 	
 	
+	// I was trying this I found in a few places, but it doesnt know what .none
+	/*
+    @Rule
+    public ExpectedException thrown = FullStackException.none();
+
+	@Test
+	public void testFullStackExceptionPush() {
+		System.out.println("testFullStackExceptionPop()");
+		Stack instance = new Stack(1);
+		try {
+			instance.push(1);
+			instance.push(1);	
+		} catch (FullStackException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
 	
 	@Test(expected=FullStackException.class)
 	public void testFullStackExceptionPush() {
@@ -67,6 +89,8 @@ public class StackTest {
 			System.out.println(e.getMessage());
 		}
 	}
+	
+	*/
 	
 	@Test
 	public void testNotEmpty() {
