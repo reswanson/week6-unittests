@@ -19,7 +19,6 @@ public class Stack {
     
     myIntegers = new ArrayList<Integer>(defaultSize);
         maxSize=defaultSize;
-		System.out.println("MAX IS : "+ maxSize);
 		System.out.println("\n------------------------------------------------");
 	}
 	
@@ -37,7 +36,6 @@ public class Stack {
     	} else {
     		int topValue=myIntegers.get(0);
         	myIntegers.remove(0);
-    		System.out.println("pop size: "+ myIntegers.size());
     		return(topValue);
     	}
 	}
@@ -49,7 +47,6 @@ public class Stack {
     		throw new FullStackException("The stack is full.");
     	} else {
      	   	myIntegers.add(item);
-    		System.out.println("push size: "+ myIntegers.size());
     		return true;
     	}
 	}
@@ -70,6 +67,18 @@ public class Stack {
 			return false;
 		}
 	}
+	
+	
+	public int sumThemAll() {
+		// Loop through list and add all the values up.
+		int total=0;
+		for (Integer num : myIntegers) { 		      
+			total = total + num;	
+	    }
+		return (total);
+
+	}
+
 	
 	public int size() {
 		return (myIntegers.size());

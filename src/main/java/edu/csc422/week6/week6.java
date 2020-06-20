@@ -60,7 +60,13 @@ public class week6 {
 					System.out.println("display");
 					System.out.println(list1);
 					break;
-				case "7":
+				case "7": // sumthemall
+					System.out.println("\n------------------------------------------------");
+					System.out.println("sumthemall");
+					System.out.println(list1);
+					System.out.println("Sum of list: " + list1.sumThemAll());
+					break;
+				case "8":
 					System.out.println("\n------------------------------------------------");
 					System.out.println("\nGoodbye!");
 					exitnow=true;
@@ -83,7 +89,8 @@ public class week6 {
 		System.out.println(" 4) Size");
 		System.out.println(" 5) Empty");
 		System.out.println(" 6) Display");
-		System.out.println(" 7) Exit program");
+		System.out.println(" 7) Empty");
+		System.out.println(" 8) Exit program");
 		System.out.println("Your choice: ");
 	}
 
