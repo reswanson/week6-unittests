@@ -37,6 +37,20 @@ public class StackTest {
 		assertEquals(3, instance.size());
 	}
 	
+	
+	@Test
+	public void testsumThemAll() {
+		System.out.println("sumThemAll");
+		Stack instance = new Stack();
+		try {
+			instance.push(10);
+			instance.push(20);
+			instance.push(30);
+		} catch (FullStackException e) {
+			System.out.println(e.getMessage());
+		}
+		assertEquals(60, instance.sumThemAll());
+	}
 		
 	@Test
 	public void testEmpty() {
