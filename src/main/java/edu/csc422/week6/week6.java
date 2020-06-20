@@ -89,7 +89,7 @@ public class week6 {
 		System.out.println(" 4) Size");
 		System.out.println(" 5) Empty");
 		System.out.println(" 6) Display");
-		System.out.println(" 7) Empty");
+		System.out.println(" 7) sumThemAll");
 		System.out.println(" 8) Exit program");
 		System.out.println("Your choice: ");
 	}
