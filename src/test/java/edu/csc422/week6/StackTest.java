@@ -1,14 +1,16 @@
 package edu.csc422.week6;
 
 import org.junit.Test;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.hasProperty;
 import org.junit.Rule;
-
 import static org.junit.Assert.*;
 
 
 public class StackTest {
 
-	
+
 	/*
 	@Test
 	public void testStack() {
@@ -19,9 +21,9 @@ public class StackTest {
 	public void testStackInt() {
 		fail("Not yet implemented");
 	}
-	*/
-	
-	
+	 */
+
+
 	@Test
 	public void testSize() {
 		System.out.println("testSize");
@@ -36,8 +38,8 @@ public class StackTest {
 		}
 		assertEquals(3, instance.size());
 	}
-	
-	
+
+
 	@Test
 	public void testsumThemAll() {
 		System.out.println("sumThemAll");
@@ -51,15 +53,45 @@ public class StackTest {
 		}
 		assertEquals(60, instance.sumThemAll());
 	}
-		
+
 	@Test
 	public void testEmpty() {
 		System.out.println("testEmpty");
 		Stack instance = new Stack();
 		assertEquals(true, instance.empty());
 	}
+
 	
 	
+	// I tried a few times to get logic working to specifically test exceptions, but I couldn't get it working.
+	
+	
+	/*
+	@Rule
+	public FullStackException thrown = FullStackException.none();
+
+	@Test
+	public void testFullStackException() throws FullStackException {
+		System.out.println("testFullStackException");
+
+
+		//test type
+		thrown.expect(FullStackException.class);
+
+		//test message
+		thrown.expectMessage(is("The stack is full."));
+
+		Stack instance = new Stack(3);
+
+		instance.push(1);
+		instance.push(1);
+		instance.push(1);
+		instance.push(1);
+	}
+	*/
+
+	
+
 	/*
 	@Test(expected=EmptyStackException.class)
 	public void testEmptyStackExceptionPop() {
@@ -71,41 +103,9 @@ public class StackTest {
 			System.out.println(e.getMessage());
 		}
 	}
-	*/
-	
-	
-	// I was trying this I found in a few places, but it doesnt know what .none
-	/*
-    @Rule
-    public ExpectedException thrown = FullStackException.none();
+	 */
 
-	@Test
-	public void testFullStackExceptionPush() {
-		System.out.println("testFullStackExceptionPop()");
-		Stack instance = new Stack(1);
-		try {
-			instance.push(1);
-			instance.push(1);	
-		} catch (FullStackException e) {
-			System.out.println(e.getMessage());
-		}
-	}
 
-	
-	@Test(expected=FullStackException.class)
-	public void testFullStackExceptionPush() {
-		System.out.println("testFullStackExceptionPop()");
-		Stack instance = new Stack(1);
-		try {
-			instance.push(1);
-			instance.push(1);	
-		} catch (FullStackException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-	
-	*/
-	
 	@Test
 	public void testNotEmpty() {
 		System.out.println("testNotEmpty");
@@ -124,7 +124,6 @@ public class StackTest {
 
 		Stack instance = new Stack();
 		try {
-			// To test failure, comment out one of these push lines.
 			instance.push(1);
 			instance.push(1);
 			instance.push(1);
@@ -134,7 +133,7 @@ public class StackTest {
 		}
 		assertEquals(2, instance.size());
 	}
-	
+
 	@Test
 	public void testPush() {
 		System.out.println("testPush");
@@ -148,7 +147,7 @@ public class StackTest {
 		}
 	}
 
-	
+
 	@Test
 	public void testPeek() {
 		System.out.println("testPeek");

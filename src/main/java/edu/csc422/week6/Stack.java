@@ -16,50 +16,50 @@ public class Stack {
 
 
 	public Stack() {
-    
-    myIntegers = new ArrayList<Integer>(defaultSize);
-        maxSize=defaultSize;
+
+		myIntegers = new ArrayList<Integer>(defaultSize);
+		maxSize=defaultSize;
 		System.out.println("\n------------------------------------------------");
 	}
-	
+
 	public Stack(int size) {
-        myIntegers = new ArrayList<Integer>(size); 
-        maxSize=size;
+		myIntegers = new ArrayList<Integer>(size); 
+		maxSize=size;
 		System.out.println("MAX IS : "+ maxSize);
 	}
-	
+
 
 	// throws EmptyStackException - thrown by pop() and peek() when stack is empty.
 	public int pop() throws EmptyStackException {	
-        if ((myIntegers.size()) == 0 ) {
-    		throw new EmptyStackException("The stack is empty.");
-    	} else {
-    		int topValue=myIntegers.get(0);
-        	myIntegers.remove(0);
-    		return(topValue);
-    	}
+		if ((myIntegers.size()) == 0 ) {
+			throw new EmptyStackException("The stack is empty.");
+		} else {
+			int topValue=myIntegers.get(0);
+			myIntegers.remove(0);
+			return(topValue);
+		}
 	}
-	
-	  
+
+
 	//FullStackException - thrown by push when stack is full.
 	public boolean push(int item) throws FullStackException {
-        if (myIntegers.size() > maxSize-1) {
-    		throw new FullStackException("The stack is full.");
-    	} else {
-     	   	myIntegers.add(item);
-    		return true;
-    	}
+		if (myIntegers.size() > maxSize-1) {
+			throw new FullStackException("The stack is full.");
+		} else {
+			myIntegers.add(item);
+			return true;
+		}
 	}
-	
+
 	//  EmpyStackException - thrown by pop() and peek() when stack is empty.
 	public int peek() throws EmptyStackException {	
 		if ( myIntegers.size() == 0) {
-    		throw new EmptyStackException("The stack is empty.");
+			throw new EmptyStackException("The stack is empty.");
 		} else {
 			return(myIntegers.get(0));
 		}
 	}
-	
+
 	public boolean empty() {
 		if (myIntegers.size() == 0) {
 			return true;
@@ -67,24 +67,24 @@ public class Stack {
 			return false;
 		}
 	}
-	
-	
+
+
 	public int sumThemAll() {
 		// Loop through list and add all the values up.
 		int total=0;
 		for (Integer num : myIntegers) { 		      
 			total = total + num;	
-	    }
+		}
 		return (total);
 
 	}
 
-	
+
 	public int size() {
 		return (myIntegers.size());
 	}
 
-		
+
 	@Override
 	public String toString() {	
 		return(Arrays.toString(myIntegers.toArray()));
